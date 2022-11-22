@@ -13,11 +13,22 @@ import Footer from "./components/footer/Footer";
 const App = () => {
   const [active, setActive] = useState("home");
 
+  // Lägg till den här på samtliga knappar t.ex scroll down och sociala medier.
+  const removeButtonFocus = (e) => {
+    console.log(e);
+    const target = e.target.closest("a");
+
+    if (!target) {
+      return;
+    }
+    
+    target.blur();
+  };
 
   return (
     <>
       <Router>
-        <Nav active={active} updatePage={setActive}/>
+        <Nav active={active} updatePage={setActive} removeButtonFocus={removeButtonFocus}/>
         <Routes>
           <Route
             exact path="/"
