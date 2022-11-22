@@ -4,7 +4,7 @@ import { RiComputerLine } from "react-icons/ri";
 import { AiFillFolderOpen } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
-const About = ({setActive}) => {
+const About = ({updatePage}) => {
   return (
     <section id="about">
       <h3>Who Am i?</h3>
@@ -23,7 +23,7 @@ const About = ({setActive}) => {
             <article className="about-card">
               <AiFillFolderOpen className="card-icon" />
               <h4>Projects</h4>
-              <Link onClick={setActive("portfolio")} to="/portfolio">Click to read more about my projects</Link>
+              <Link onClick={() => updatePage("portfolio")} to="/portfolio">Click to read more about my projects</Link>
             </article>
  
           </div>
@@ -32,7 +32,7 @@ const About = ({setActive}) => {
               nemo numquam alias aperiam, a corrupti itaque labore, quae soluta aspernatur voluptatum? Sequi assumenda
               ea mollitia! Necessitatibus.
             </p>
-            <Link className="btn btn-primary" to="/contact">Let's get started</Link>
+            <Link onClick={() => updatePage("contact")} className="btn btn-primary" to="/contact">Let's get started</Link>
         </div>
       </div>
     </section>
