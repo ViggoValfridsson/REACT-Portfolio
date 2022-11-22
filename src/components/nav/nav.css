@@ -1,0 +1,46 @@
+.container__nav {
+  height: 4rem;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.container__nav a {
+  width: 4rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20%;
+}
+.container__nav .active {
+  background-color: var(--color-bg-variant);
+}
+
+.container__nav a:hover {
+  transform: scale(1.1);
+  background-color: rgba(50, 50, 50, 0.3);
+  border: 1px solid var(--color-primary);
+
+}
+
+.container__nav a:focus {
+  transform: scale(1.1);
+  background-color: rgba(50, 50, 50, 0.3);
+  border: 1px solid var(--color-primary);
+}
+
+.container__nav svg {
+  font-size: 1.5rem;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+  .container__nav {
+    gap: 5rem;
+  }
+}
+
+

@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header";
 import Nav from "./components/nav/Nav";
 import About from "./components/about/About";
@@ -11,15 +12,26 @@ import Footer from "./components/footer/Footer";
 const App = () => {
   return (
     <>
-      <Header />
-      <Nav />
-      <About />
-      <Experience />
-      <Services />
-      <Portfolio />
-      <Testimonials />
-      <Contact />
-      <Footer />
+      <Router>
+        <Nav />
+        <Routes>
+          <Route
+            exact path="/"
+            element={
+              <>
+                <Header />
+                <About />
+                <Experience />
+                <Services />
+                <Testimonials />
+              </>
+            }
+          ></Route>
+          <Route path="/portfolio" element={<Portfolio />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 };
