@@ -1,6 +1,6 @@
 header {
   height: 82vh;
-  padding-top: 4rem;
+  padding-top: 1.2rem;
   overflow: hidden;
   font-weight: 400;
 }
@@ -75,6 +75,7 @@ header h2 {
 @media (min-width: 600px) {
   header {
     height: 82vh;
+    padding-top: 2rem;
   }
   .header__socials svg {
     display: block;
