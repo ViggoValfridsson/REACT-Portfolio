@@ -1,38 +1,27 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { AiOutlineHome, AiOutlineUser, AiFillFolderOpen, AiOutlineMessage } from "react-icons/ai";
 import {BiBookAlt} from "react-icons/bi"
 import "./nav.css";
 
-const Nav = () => {
-  const [active, setActive] = useState("home");
+const Nav = ({active, updatePage}) => {
 
-  const removeButtonBlur = (e) => {
-    const target = e.target.closest("a");
-
-    if (!target) {
-      return;
-    }
-    
-    target.blur();
-  };
 
   return (
-    <nav className="container container__nav" onClick={removeButtonBlur}>
-      <Link to="/" className={active === "home" ? "active" : ""} onClick={() => setActive("home")}>
+    <nav className="container container__nav" >
+      <Link to="/" className={active === "home" ? "active" : ""} onClick={() => updatePage("home")}>
         <AiOutlineHome />
       </Link>
-      <HashLink smooth to="/#about" onClick={() => setActive("home")}>
+      <HashLink smooth to="/#about" onClick={() => updatePage("home")}>
         <AiOutlineUser />
       </HashLink>
-      <HashLink smooth to="/#experience" onClick={() => setActive("home")}>
+      <HashLink smooth to="/#experience" onClick={() => updatePage("home")}>
         <BiBookAlt />
       </HashLink>
-      <Link to="/portfolio" className={active === "portfolio" ? "active" : ""} onClick={() => setActive("portfolio")}>
+      <Link to="/portfolio" className={active === "portfolio" ? "active" : ""} onClick={() => updatePage("portfolio")}>
         <AiFillFolderOpen />
       </Link>
-      <Link to="/contact" className={active === "contact" ? "active" : ""} onClick={() => setActive("contact")}>
+      <Link to="/contact" className={active === "contact" ? "active" : ""} onClick={() => updatePage("contact")}>
         <AiOutlineMessage />
       </Link>
     </nav>
