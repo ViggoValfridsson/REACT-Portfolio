@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { AiOutlineHome, AiOutlineUser, AiFillFolderOpen, AiOutlineMessage } from "react-icons/ai";
-import { FiBook } from "react-icons/fi";
+import {BiBookAlt} from "react-icons/bi"
 import "./nav.css";
 
 const Nav = () => {
@@ -10,6 +10,11 @@ const Nav = () => {
 
   const removeButtonBlur = (e) => {
     const target = e.target.closest("a");
+
+    if (!target) {
+      return;
+    }
+    
     target.blur();
   };
 
@@ -22,7 +27,7 @@ const Nav = () => {
         <AiOutlineUser />
       </HashLink>
       <HashLink smooth to="/#experience" onClick={() => setActive("home")}>
-        <AiOutlineUser />
+        <BiBookAlt />
       </HashLink>
       <Link to="/portfolio" className={active === "portfolio" ? "active" : ""} onClick={() => setActive("portfolio")}>
         <AiFillFolderOpen />

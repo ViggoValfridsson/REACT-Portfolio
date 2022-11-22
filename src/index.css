@@ -18,7 +18,7 @@
 
 :root {
   --color-bg: #141c36;
-  --color-bg-variant: #1c2650;
+  --color-bg-variant: #27387c;
   --color-primary: #a239ca;
   --color-primary-variant: #4717f6;
   --color-white: #e7dfdd;
@@ -137,6 +137,7 @@ img {
 @media (min-width: 1024px) {
   .container {
     width: var(--container-width-lg);
+    max-width: 1450px; 
   }
 
   .section {

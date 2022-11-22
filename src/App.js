@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Header from "./components/header/Header";
 import Nav from "./components/nav/Nav";
 import About from "./components/about/About";
@@ -10,17 +11,29 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 
 const App = () => {
+  const [active, setActive] = useState("home");
+
+  const removeButtonFocus = (e) => {
+    const target = e.target.closest("a");
+
+    if (!target) {
+      return;
+    }
+    
+    target.blur();
+  };
+
   return (
     <>
       <Router>
-        <Nav />
+        <Nav active={active} setActive={setActive} removeButtonFocus={removeButtonFocus}/>
         <Routes>
           <Route
             exact path="/"
             element={
               <>
                 <Header />
-                <About />
+                <About setActive={setActive} />
                 <Experience />
                 <Services />
                 <Testimonials />

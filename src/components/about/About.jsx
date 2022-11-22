@@ -1,9 +1,42 @@
-import "./about.css"
+import "./about.css";
+import me_image_temp from "../../assets/me_image_temp.png";
+import { RiComputerLine } from "react-icons/ri";
+import { AiFillFolderOpen } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
-const About = () => {
+const About = ({setActive}) => {
   return (
-    <section id="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit quam quisquam, repellat, debitis ad nisi, vero architecto fugit nam et doloribus provident ab esse obcaecati facilis accusamus. Earum quod veritatis provident eum numquam consequuntur quis magnam corrupti pariatur totam quidem veniam deserunt, eaque maiores illo, nobis laudantium molestiae odio dolorem, magni sequi perferendis. Aut accusantium facere asperiores suscipit error repudiandae alias, vitae delectus laborum, corrupti laudantium iste ullam? Alias sunt aspernatur, modi quia expedita dolor tenetur. Unde, libero? Maxime alias ipsa sit reiciendis tenetur minus nisi possimus asperiores cupiditate at similique odio necessitatibus dolores vitae suscipit, eligendi, perspiciatis sed explicabo voluptatum vel. Officia deserunt quas assumenda nisi alias ipsa reprehenderit eius vitae! Veniam, itaque, provident rem sed cum quibusdam porro, earum hic dolore ratione labore corporis autem. Optio id asperiores quibusdam et eius fuga animi ut nihil voluptatum, eos error illum quas ea odit suscipit laudantium voluptatibus odio consequatur! Officia similique deleniti impedit officiis, repudiandae repellendus quam! Odit amet quaerat a voluptate maxime neque cumque totam labore? Quibusdam id soluta ratione natus ipsam, enim perspiciatis iusto suscipit ipsa ex alias. Aperiam commodi harum, id voluptate suscipit, dolorem consectetur cupiditate magni numquam architecto sapiente quibusdam excepturi cum. A rem perspiciatis saepe velit quidem esse explicabo deleniti ratione voluptatibus cupiditate consequatur officiis, maxime molestiae error eius possimus quaerat assumenda qui consequuntur adipisci fugit? Incidunt velit temporibus ea hic nesciunt libero placeat, eaque explicabo doloremque, facere, reiciendis alias ut. Tempore facilis aperiam itaque expedita molestiae asperiores numquam doloremque alias magni ipsam odit exercitationem voluptas sunt amet aspernatur, laboriosam, iure labore perferendis laborum molestias at, necessitatibus reprehenderit quaerat. Esse voluptatibus consequatur architecto quaerat amet sapiente omnis ullam animi, quas ratione inventore? Et ratione, consectetur ipsam eum nostrum delectus mollitia vel obcaecati nobis ea veniam deleniti blanditiis molestias iusto, animi odit. Totam, sit, numquam tenetur labore, repellat quos delectus vel nobis rerum fugiat dolore officia maxime sint. Consequuntur repudiandae ullam a pariatur tenetur perferendis porro voluptatum provident quasi! At, ipsum, facere aut repellat eligendi ut laborum inventore sint iusto aspernatur enim dolores. Rerum officiis culpa tempora explicabo atque magnam magni illo. Hic esse dolorum, culpa sunt consequatur numquam iste neque officia nesciunt eligendi animi sint debitis suscipit, delectus quo asperiores libero perspiciatis fugiat quae nobis possimus commodi? Sint consequuntur a eaque tempore porro voluptas eum ex veniam dicta, aspernatur nostrum, unde cum earum voluptatum provident, similique rem vel labore veritatis odit voluptate voluptatem? Consequatur obcaecati voluptas, officiis pariatur minus provident eaque hic enim facere dolorum in mollitia repellendus quae inventore quo, labore voluptatibus veritatis voluptatem fuga harum voluptate? Recusandae, maxime porro? Tempora, rerum magni quo enim, a aperiam sint distinctio natus, totam repudiandae cupiditate. Voluptatibus omnis facere, reprehenderit tempore adipisci possimus officiis iure labore similique magni consequatur quidem quas quaerat repudiandae ducimus vero est quibusdam delectus voluptatem eos quos ratione? Illum doloremque obcaecati et, velit possimus incidunt commodi delectus eligendi iste dolor unde quas laudantium expedita rerum laborum vero atque dignissimos esse neque temporibus cumque architecto facere? Commodi accusamus unde nihil, esse excepturi odit assumenda?</section>
-  )
-}
+    <section id="about">
+      <h3>Who Am i?</h3>
+      <h2>Get to know me!</h2>
+      <div className="container about__container">
+        <div className="about__me">
+          <img src={me_image_temp} alt="Me with a clear background" className="about-me-img" />
+        </div>
+        <div className="about-content">
+          <div className="about-cards">
+            <article className="about-card">
+              <RiComputerLine className="card-icon" />
+              <h4>Experience</h4>
+              <p>Currently Studying</p>
+            </article>
+            <article className="about-card">
+              <AiFillFolderOpen className="card-icon" />
+              <h4>Projects</h4>
+              <Link onClick={setActive("portfolio")} to="/portfolio">Click to read more about my projects</Link>
+            </article>
+ 
+          </div>
+          <p className="about-me-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam consequuntur corporis aliquid,
+              nemo numquam alias aperiam, a corrupti itaque labore, quae soluta aspernatur voluptatum? Sequi assumenda
+              ea mollitia! Necessitatibus.
+            </p>
+            <Link className="btn btn-primary" to="/contact">Let's get started</Link>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-export default About
+export default About;

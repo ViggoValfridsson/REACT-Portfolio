@@ -1,6 +1,6 @@
 header {
-  height: 82vh;
-  padding-top: 1.2rem;
+  height: 43rem;
+  margin-top: 1.2rem;
   overflow: hidden;
   font-weight: 400;
 }
@@ -10,7 +10,7 @@ header h1 {
 }
 
 header h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .header__container {
@@ -33,7 +33,7 @@ header h2 {
   align-items: center;
   gap: 1rem;
   position: absolute;
-  left: 0;
+  left: 2.5rem;
   bottom: 6rem;
   transition: var(--transition);
 }
@@ -74,8 +74,7 @@ header h2 {
 
 @media (min-width: 600px) {
   header {
-    height: 82vh;
-    padding-top: 2rem;
+    margin-top: 4rem;
   }
   .header__socials svg {
     display: block;
