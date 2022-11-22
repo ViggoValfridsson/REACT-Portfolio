@@ -1,14 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { AiOutlineHome, AiOutlineUser, AiFillFolderOpen, AiOutlineMessage } from "react-icons/ai";
 import { FiBook } from "react-icons/fi";
 import "./nav.css";
 
 const Nav = () => {
-  const [homePath, setHomePath] = useState("#");
-
-  useEffect(() => {
-    
-  })
+  const [active, setActive] = useState("home");
 
   const removeButtonBlur = (e) => {
     const target = e.target.closest("a");
@@ -16,22 +13,22 @@ const Nav = () => {
   };
 
   return (
-    <nav className="container container__nav" onClick={removeButtonBlur} >
-      <a className="active" href={homePath}>
+    <nav className="container container__nav" onClick={removeButtonBlur}>
+      <Link to="/" className={active === "home" ? "active" : ""} onClick={() => setActive("home")}>
         <AiOutlineHome />
-      </a>
-      <a href="#about" >
+      </Link>
+      <Link to="/#about" onClick={() => setActive("home")}>
         <AiOutlineUser />
-      </a>
-      <a href="#experience">
+      </Link>
+      <Link to="/#experience" onClick={() => setActive("home")}>
         <FiBook />
-      </a>
-      <a href="#portfolio">
+      </Link>
+      <Link to="/portfolio" className={active === "portfolio" ? "active" : ""} onClick={() => setActive("portfolio")}>
         <AiFillFolderOpen />
-      </a>
-      <a href="/contact">
+      </Link>
+      <Link to="/contact" className={active === "contact" ? "active" : ""} onClick={() => setActive("contact")}>
         <AiOutlineMessage />
-      </a>
+      </Link>
     </nav>
   );
 };
