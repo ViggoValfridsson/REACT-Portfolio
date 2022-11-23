@@ -5,6 +5,7 @@ const Portfolio = () => {
   return (
     <section id="portfolio">
       <h1>Portfolio</h1>
+      <h2>My Recent Projects</h2>
       <div className="container portfolio__container">
         {data.projects.map(({ id, title, imagePath, githubLink, liveDemoLink }) => {
           return (

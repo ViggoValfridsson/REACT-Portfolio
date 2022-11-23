@@ -11,7 +11,7 @@ import Footer from "./components/footer/Footer";
 const App = () => {
   const [active, setActive] = useState("home");
 
-  // Lägg till den här på samtliga knappar t.ex scroll down och sociala medier.
+  // Lägg till den här på samtliga knappar t.ex scroll down och sociala medier. och <a>
   const removeButtonFocus = (e) => {
     const target = e.target.closest("a");
 

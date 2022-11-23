@@ -1,10 +1,16 @@
 #portfolio {
-  margin-top: 2rem;
+  margin-top: 1.2rem;
 }
 
 #portfolio h1 {
   font-weight: 300;
   text-align: center;
+}
+
+#portfolio h2 {
+  font-size: 1.2rem;
+  color: var(--color-white);
+  margin: 0;
 }
 
 .portfolio__container {
@@ -45,10 +51,10 @@
 
 @media (min-width: 600px) {
   #portfolio {
-    margin-top: 3.1rem;
+    margin-top: 2rem;
   }
   .portfolio__container {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
