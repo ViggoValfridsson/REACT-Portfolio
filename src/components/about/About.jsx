@@ -2,9 +2,9 @@ import "./about.css";
 import me_image_temp from "../../assets/me_image_temp.png";
 import { RiComputerLine } from "react-icons/ri";
 import { AiFillFolderOpen } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
-const About = ({updatePage}) => {
+const About = ({ updatePage }) => {
   return (
     <section id="about">
       <h3>Who Am i?</h3>
@@ -23,16 +23,19 @@ const About = ({updatePage}) => {
             <article className="about-card">
               <AiFillFolderOpen className="card-icon" />
               <h4>Projects</h4>
-              <Link onClick={() => updatePage("portfolio")} to="/portfolio">Click to read more about my projects</Link>
+              <HashLink smooth to="/portfolio#top" onClick={() => updatePage("portfolio")}>
+                Click to read more about my projects
+              </HashLink>
             </article>
- 
           </div>
           <p className="about-me-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam consequuntur corporis aliquid,
-              nemo numquam alias aperiam, a corrupti itaque labore, quae soluta aspernatur voluptatum? Sequi assumenda
-              ea mollitia! Necessitatibus.
-            </p>
-            <Link onClick={() => updatePage("contact")} className="btn btn-primary" to="/contact">Let's get started</Link>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam consequuntur corporis aliquid, nemo
+            numquam alias aperiam, a corrupti itaque labore, quae soluta aspernatur voluptatum? Sequi assumenda ea
+            mollitia! Necessitatibus.
+          </p>
+          <HashLink smooth to="/contact#top" onClick={() => updatePage("contact")} className="btn btn-primary">
+            Let's get started
+          </HashLink>
         </div>
       </div>
     </section>
