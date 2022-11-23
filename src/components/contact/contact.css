@@ -1,0 +1,129 @@
+#contact {
+  margin-top: 1.2rem;
+}
+
+#contact h1 {
+  font-weight: 300;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 1.2rem;
+  color: var(--color-white);
+  margin: 0;
+}
+
+.container__contact {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-option {
+  background-color: var(--color-bg-variant);
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  text-align: center;
+}
+
+.contact-option:hover {
+  background-color: transparent;
+  border-color: var(--color-primary);
+}
+
+.contact-option h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.contact-option h3:last-of-type {
+  margin-bottom: 0.7rem;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form label {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.8rem;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 2px solid var(--color-primary);
+  color: var(--color-white);
+  resize: none;
+}
+
+.contact-form button {
+  font-size: 1rem;
+  padding: 1rem 1.55rem;
+}
+
+.button-response {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.email-feedback {
+  border: 2px solid green;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  width: 100%;
+  padding: 0.65rem 0.5rem;
+  border-radius: 0.8rem;
+}
+
+.email-failure {
+  border-color: red;
+}
+
+@media (min-width: 600px) {
+  #contact {
+    margin-top: 2rem;
+  }
+  .container__contact {
+    margin-top: 2.5rem;
+    width: 58%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .container__contact {
+    grid-template-columns: 30% 58%;
+    width: 75%;
+    gap: 12%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .container__contact {
+    width: 60%;
+  }
+}
