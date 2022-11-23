@@ -1,0 +1,23 @@
+#portfolio {
+  margin-top: 2rem;
+
+}
+
+#portfolio h1 {
+  font-weight: 300;
+  text-align: center;
+}
+
+
+
+@media (min-width: 600px) {
+  #portfolio {
+    margin-top: 3.1rem;
+  
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+
+}
