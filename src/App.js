@@ -15,7 +15,6 @@ const App = () => {
 
   // Lägg till den här på samtliga knappar t.ex scroll down och sociala medier.
   const removeButtonFocus = (e) => {
-    console.log(e);
     const target = e.target.closest("a");
 
     if (!target) {
@@ -24,6 +23,8 @@ const App = () => {
     
     target.blur();
   };
+
+  // lägg till animationer 
 
   return (
     <>

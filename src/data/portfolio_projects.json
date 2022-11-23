@@ -1,0 +1,25 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Ölsidan",
+      "imagePath": "./project_images/dark_mode_olsidan.PNG",
+      "githubLink": "https://github.com/ViggoValfridsson/Viggo-Valfridsson-JavaScript-Frontend-5-course-submission.git",
+      "liveDemoLink": "https://reactjs.org"
+    },
+    {
+      "id": 2,
+      "title": "Blomstersidan",
+      "imagePath": "./project_images/blomstersidan.PNG",
+      "githubLink": "https://github.com/ViggoValfridsson/6-course-submission-HTML-CSS-Grupp-1-GBG.git",
+      "liveDemoLink": "https://reactjs.org"
+    },
+    {
+      "id": 3,
+      "title": "Template för layout",
+      "imagePath": "./project_images/dark_mode_olsidan.PNG",
+      "githubLink": "https://github.com/ViggoValfridsson/Viggo-Valfridsson-JavaScript-Frontend-5-course-submission.git",
+      "liveDemoLink": "https://reactjs.org"
+    }
+  ]
+}
