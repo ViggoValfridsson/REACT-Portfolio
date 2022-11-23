@@ -1,0 +1,71 @@
+.experience__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+#experience h3 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#experience h2 {
+  color: var(--color-white);
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.experience-card {
+  background-color: var(--color-bg-variant);
+  width: var(--container-width-sm);
+  margin: 0 auto;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  padding: 2rem 1rem 2rem 1rem;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.experience-card:hover {
+  background-color: transparent;
+  border-color: var(--color-primary);
+  cursor: default;
+}
+
+.experience-card .card-content {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.experience-card .card-content h4 {
+  font-weight: 300;
+}
+
+.tech-icons {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .experience-card .card-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .experience-card {
+    width: auto;
+    margin: 0;
+    padding: 2rem 1rem 1rem 1rem;
+  }
+}
+
+@media (min-width: 717px) {
+  .experience-card {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+}
