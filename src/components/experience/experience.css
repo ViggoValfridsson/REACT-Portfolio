@@ -4,6 +4,10 @@
   gap: 0;
 }
 
+#experience {
+  scroll-margin-top: 3rem;
+}
+
 #experience h3 {
   text-align: center;
   font-size: 1.2rem;
