@@ -4,11 +4,9 @@ import { AiOutlineHome, AiOutlineUser, AiFillFolderOpen, AiOutlineMessage } from
 import {BiBookAlt} from "react-icons/bi"
 import "./nav.css";
 
-const Nav = ({active, updatePage}) => {
-
-
+const Nav = ({active, updatePage, removeButtonFocus}) => {
   return (
-    <nav className="container container__nav" >
+    <nav className="container container__nav" onClick={removeButtonFocus}>
       <Link to="/" className={active === "home" ? "active" : ""} onClick={() => updatePage("home")}>
         <AiOutlineHome />
       </Link>
