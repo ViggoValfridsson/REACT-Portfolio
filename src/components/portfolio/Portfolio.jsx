@@ -1,12 +1,12 @@
 import "./portfolio.css";
 import data from "../../data/portfolio_projects.json";
 
-const Portfolio = () => {
+const Portfolio = ({removeButtonFocus}) => {
   return (
     <section id="portfolio">
       <h1>Portfolio</h1>
       <h2>My Recent Projects</h2>
-      <div className="container portfolio__container">
+      <div className="container portfolio__container" onClick={removeButtonFocus}>
         {data.projects.map(({ id, title, imagePath, githubLink, liveDemoLink }) => {
           return (
             <article className="portfolio-item" key={id}>

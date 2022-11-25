@@ -4,9 +4,9 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 import { SlSocialGithub } from "react-icons/sl";
 import { BsFacebook } from "react-icons/bs";
 
-const Footer = ({ updatePage }) => {
+const Footer = ({ updatePage, removeButtonFocus }) => {
   return (
-    <footer>
+    <footer onClick={removeButtonFocus}>
       <div className="logo-container">
         <HashLink className="footer-logo" smooth to="/#top" onClick={() => updatePage("home")}>
           Viggo Valfridsson

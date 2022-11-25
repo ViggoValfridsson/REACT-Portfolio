@@ -6,12 +6,11 @@ import About from "./components/about/About";
 import Experience from "./components/experience/Experience";
 import Portfolio from "./components/portfolio/Portfolio";
 import Contact from "./components/contact/Contact";
-import Footer from "./components/footer/Footer";
+import Footer from "./components/footer/Footer.jsx";
 
 const App = () => {
   const [active, setActive] = useState("home");
 
-  // Lägg till den här på samtliga knappar t.ex scroll down och sociala medier. och <a>
   const removeButtonFocus = (e) => {
     const target = e.target.closest("a");
 
@@ -34,16 +33,16 @@ const App = () => {
             path="/"
             element={
               <>
-                <Header updatePage={setActive} />
+                <Header updatePage={setActive} removeButtonFocus={removeButtonFocus} />
                 <About updatePage={setActive} />
                 <Experience />
               </>
             }
           ></Route>
-          <Route path="/portfolio" element={<Portfolio />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/portfolio" element={<Portfolio removeButtonFocus={removeButtonFocus} />}></Route>
+          <Route path="/contact" element={<Contact removeButtonFocus={removeButtonFocus} />}></Route>
         </Routes>
-        <Footer updatePage={setActive} />
+        <Footer updatePage={setActive} removeButtonFocus={removeButtonFocus} />
       </Router>
     </>
   );
