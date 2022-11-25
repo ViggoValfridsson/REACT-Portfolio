@@ -1,0 +1,75 @@
+#errorPage {
+  margin-top: 1.2rem;
+}
+
+#errorPage h1 {
+  font-weight: 300;
+  text-align: center;
+}
+
+#errorPage h2 {
+  font-size: 1.2rem;
+  color: var(--color-white);
+  margin: 0;
+}
+
+#errorPage h3 {
+  text-align: center;
+}
+
+.errorPage__container {
+  min-height: 34vh;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.link-container {
+  background-color: var(--color-bg-variant);
+  height: fit-content;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+}
+
+.link-container:hover {
+  background-color: transparent;
+  border-color: var(--color-primary);
+}
+
+.link-container h4 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.error-links {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.error-links .btn {
+  width: 70%;
+}
+
+@media (min-width: 900px) {
+  .link-container {
+    width: max-content;
+  }
+  .error-links {
+    display: grid;
+    display: flex;
+    gap: 2rem;
+  }
+  .error-links .btn {
+    width: max-content;
+  }
+}
