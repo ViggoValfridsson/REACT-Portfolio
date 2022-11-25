@@ -6,7 +6,7 @@ import "./nav.css";
 
 const Nav = ({active, updatePage, removeButtonFocus}) => {
   return (
-    <nav className="container container__nav" onClick={removeButtonFocus}>
+    <nav id="top" className="container container__nav" onClick={removeButtonFocus}>
       <Link to="/" className={active === "home" ? "active" : ""} onClick={() => updatePage("home")}>
         <AiOutlineHome />
       </Link>

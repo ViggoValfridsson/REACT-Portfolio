@@ -18,19 +18,20 @@ const App = () => {
     if (!target) {
       return;
     }
-    
+
     target.blur();
   };
 
-  // lägg till animationer 
+  // lägg till animationer
 
   return (
     <>
       <Router>
-        <Nav active={active} updatePage={setActive} removeButtonFocus={removeButtonFocus}/>
+        <Nav active={active} updatePage={setActive} removeButtonFocus={removeButtonFocus} />
         <Routes>
           <Route
-            exact path="/"
+            exact
+            path="/"
             element={
               <>
                 <Header updatePage={setActive} />
@@ -42,7 +43,7 @@ const App = () => {
           <Route path="/portfolio" element={<Portfolio />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
         </Routes>
-        <Footer />
+        <Footer updatePage={setActive} />
       </Router>
     </>
   );

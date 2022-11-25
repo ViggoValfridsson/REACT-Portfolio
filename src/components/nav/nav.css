@@ -1,3 +1,7 @@
+#top {
+  scroll-margin-top: 5rem;
+}
+
 .container__nav {
   height: 4rem;
   margin-top: 0.5rem;
