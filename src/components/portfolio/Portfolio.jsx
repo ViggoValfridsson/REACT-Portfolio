@@ -13,7 +13,7 @@ const Portfolio = ({removeButtonFocus}) => {
               <div className="portfolio-image">
                 <img src={imagePath} alt={`A screenshot of the project ${title}.`} />
               </div>
-              <h2>{title}</h2>
+              <h3>{title}</h3>
               <div className="portfolio-cta">
                 <a
                   href={githubLink}
