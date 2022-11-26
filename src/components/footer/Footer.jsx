@@ -6,7 +6,7 @@ import { BsFacebook } from "react-icons/bs";
 
 const Footer = ({ removeButtonFocus }) => {
   return (
-    <footer onClick={removeButtonFocus}>
+    <footer onPointerUp={removeButtonFocus}>
       <div className="logo-container">
         <HashLink className="footer-logo" smooth to="/#top">
           Viggo Valfridsson

@@ -25,7 +25,7 @@ const Nav = ({ removeButtonFocus }) => {
   }, [navigate]);
 
   return (
-    <nav id="top" className="container container__nav" onClick={removeButtonFocus}>
+    <nav id="top" className="container container__nav" onPointerUp={removeButtonFocus}>
       <Link to="/" className={active === "home" ? "active" : ""}>
         <AiOutlineHome />
       </Link>
