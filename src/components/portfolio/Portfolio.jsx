@@ -9,7 +9,7 @@ const Portfolio = ({removeButtonFocus}) => {
       <div className="container portfolio__container" onClick={removeButtonFocus}>
         {data.projects.map(({ id, title, imagePath, githubLink, liveDemoLink }) => {
           return (
-            <article className="portfolio-item" key={id}>
+            <article className="portfolio-item" key={id} data-aos="fade-up">
               <div className="portfolio-image">
                 <img src={imagePath} alt={`A screenshot of the project ${title}.`} />
               </div>

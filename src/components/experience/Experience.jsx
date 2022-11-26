@@ -8,7 +8,7 @@ const Experience = () => {
     <section id="experience">
       <h2>My skills and experiences</h2>
       <div className="container experience__container">
-        <div className="experience-card">
+        <div className="experience-card" data-aos="fade-up">
           <h3>What I know</h3>
           <div className="card-content">
             <div className="tech">

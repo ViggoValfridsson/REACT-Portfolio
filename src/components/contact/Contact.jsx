@@ -4,7 +4,7 @@ import { RiMessengerLine, RiWhatsappLine } from "react-icons/ri";
 import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 
-const Contact = ({ removeButtonFocus }) => {
+const Contact = ({ removeButtonFocus, desktopMode }) => {
   const form = useRef();
   const [showEmailConfirmation, setShowEmailConfirmation] = useState(null);
   const [showEmailFailure, setShowEmailFailure] = useState(null);
@@ -37,7 +37,7 @@ const Contact = ({ removeButtonFocus }) => {
     <section id="contact">
       <h1>Let's Talk</h1>
       <div className="container container__contact" onClick={removeButtonFocus}>
-        <div className="contact-options">
+        <div className="contact-options" data-aos={desktopMode ? "fade-right" : "fade-up"}>
           <article className="contact-option">
             <AiOutlineMail className="contact-icon" />
             <h2>Email</h2>
@@ -61,7 +61,7 @@ const Contact = ({ removeButtonFocus }) => {
             </a>
           </article>
         </div>
-        <form className="contact-form" ref={form} onSubmit={sendEmail}>
+        <form className="contact-form" ref={form} onSubmit={sendEmail} data-aos={desktopMode ? "fade-left" : "fade-up"}>
           <div>
             <label htmlFor="Name">Your full name</label>
             <input type="text" name="name" placeholder="Your Full Name" required />
