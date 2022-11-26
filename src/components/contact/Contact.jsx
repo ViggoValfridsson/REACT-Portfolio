@@ -63,16 +63,16 @@ const Contact = ({ removeButtonFocus, desktopMode }) => {
         </div>
         <form className="contact-form" ref={form} onSubmit={sendEmail} data-aos={desktopMode ? "fade-left" : "fade-up"}>
           <div>
-            <label htmlFor="Name">Your full name</label>
-            <input type="text" name="name" placeholder="Your Full Name" required />
+            <label htmlFor="name">Your full name</label>
+            <input id="name" type="text" name="name" placeholder="Your Full Name" required />
           </div>
           <div>
             <label htmlFor="email">Email</label>
-            <input name="email" type="email" placeholder="Your Email" required />
+            <input id="email" name="email" type="email" placeholder="Your Email" required />
           </div>
           <div>
             <label htmlFor="message">Your message</label>
-            <textarea name="message" rows="7" placeholder="Your message" required></textarea>
+            <textarea id="message" name="message" rows="7" placeholder="Your message" required></textarea>
           </div>
           <div className="button-response">
             <button type="submit" className="btn btn-primary">
