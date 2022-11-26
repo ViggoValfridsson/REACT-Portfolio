@@ -43,7 +43,7 @@ const Contact = ({ removeButtonFocus, desktopMode }) => {
   return (
     <section id="contact">
       <h1>Let's Talk</h1>
-      <div className="container container__contact" onClick={removeButtonFocus}>
+      <div className="container container__contact" onPointerUp={removeButtonFocus}>
         <div className="contact-options" data-aos={desktopMode ? "fade-right" : "fade-up"}>
           <article className="contact-option">
             <AiOutlineMail className="contact-icon" />

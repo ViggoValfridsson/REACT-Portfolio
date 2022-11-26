@@ -1,9 +1,9 @@
 import { HashLink } from "react-router-hash-link";
 import "./errorPage.css";
 
-const ErrorPage = () => {
+const ErrorPage = ({removeButtonFocus}) => {
   return (
-    <section id="errorPage">
+    <section id="errorPage" onPointerUp={removeButtonFocus}>
       <h1>Error 404</h1>
       <h2>Page Not Found</h2>
       <div className="container errorPage__container">

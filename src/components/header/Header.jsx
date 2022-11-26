@@ -6,7 +6,7 @@ import HeaderSocials from "./HeaderSocials";
 const Header = ({ removeButtonFocus }) => {
   return (
     <header>
-      <div className="container header__container" onClick={removeButtonFocus}>
+      <div className="container header__container" onPointerUp={removeButtonFocus}>
         <h2>Hello, my name is</h2>
         <h1>Viggo Valfridsson</h1>
         <h2 className="text-light">Web Developer</h2>
