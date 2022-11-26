@@ -87,14 +87,14 @@
 
 .button-response {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 40% 50%;
+  gap: 10%;
 }
 
 .email-feedback {
   border: 2px solid green;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
-  width: 100%;
   padding: 0.65rem 0.5rem;
   border-radius: 0.8rem;
 }
@@ -103,7 +103,22 @@
   border-color: red;
 }
 
+.btn-and-spinner {
+  display: flex;
+}
+
+.spinner {
+  overflow: visible;
+  display: flex;
+  align-items: center;
+}
+
 @media (min-width: 600px) {
+  .button-response {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%;
+  }
   #contact {
     margin-top: 2rem;
   }

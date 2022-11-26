@@ -3,13 +3,16 @@ import { AiOutlineMail } from "react-icons/ai";
 import { RiMessengerLine, RiWhatsappLine } from "react-icons/ri";
 import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
+import ClipLoader from "react-spinners/ClipLoader";
 
 const Contact = ({ removeButtonFocus, desktopMode }) => {
   const form = useRef();
   const [showEmailConfirmation, setShowEmailConfirmation] = useState(null);
   const [showEmailFailure, setShowEmailFailure] = useState(null);
+  const [showEmailLoad, setShowEmailLoad] = useState(false);
 
   const sendEmail = (e) => {
+    setShowEmailLoad(true);
     e.preventDefault();
 
     emailjs.sendForm("service_zsxh7wj", "template_qlr85xu", form.current, "8uS52kWqufSJlEdUS").then(
@@ -18,6 +21,8 @@ const Contact = ({ removeButtonFocus, desktopMode }) => {
         console.log(result.text);
         setShowEmailConfirmation("Message sent");
 
+        setShowEmailLoad(false);
+
         setTimeout(() => {
           setShowEmailConfirmation(null);
         }, 2000);
@@ -25,6 +30,8 @@ const Contact = ({ removeButtonFocus, desktopMode }) => {
       (error) => {
         console.log(error.text);
         setShowEmailFailure("Failed to send, try again!");
+
+        setShowEmailLoad(false);
 
         setTimeout(() => {
           setShowEmailFailure(null);
@@ -75,9 +82,22 @@ const Contact = ({ removeButtonFocus, desktopMode }) => {
             <textarea id="message" name="message" rows="7" placeholder="Your message" required></textarea>
           </div>
           <div className="button-response">
-            <button type="submit" className="btn btn-primary">
-              Send message
-            </button>
+            <div>
+              <button type="submit" className="btn btn-primary">
+                Send message
+              </button>
+            </div>
+            {showEmailLoad && (
+              <div className="spinner">
+                <ClipLoader
+                  color={"white"}
+                  loading={"loading"}
+                  size={40}
+                  aria-label="Loading Spinner"
+                  data-testid="loader"
+                />
+              </div>
+            )}
             {showEmailConfirmation && <div className="email-feedback email-confirmation">{showEmailConfirmation}</div>}
             {showEmailFailure && <div className="email-feedback email-failure">{showEmailFailure}</div>}
           </div>
