@@ -4,37 +4,37 @@ import { AiOutlineLinkedin } from "react-icons/ai";
 import { SlSocialGithub } from "react-icons/sl";
 import { BsFacebook } from "react-icons/bs";
 
-const Footer = ({ updatePage, removeButtonFocus }) => {
+const Footer = ({ removeButtonFocus }) => {
   return (
     <footer onClick={removeButtonFocus}>
       <div className="logo-container">
-        <HashLink className="footer-logo" smooth to="/#top" onClick={() => updatePage("home")}>
+        <HashLink className="footer-logo" smooth to="/#top">
           Viggo Valfridsson
         </HashLink>
       </div>
       <ul className="permalinks">
         <li>
-          <HashLink smooth to="/#top" onClick={() => updatePage("home")}>
+          <HashLink smooth to="/#top">
             Home
           </HashLink>
         </li>
         <li>
-          <HashLink smooth to="/#about" onClick={() => updatePage("home")}>
+          <HashLink smooth to="/#about">
             About
           </HashLink>
         </li>
         <li>
-          <HashLink smooth to="/#experience" onClick={() => updatePage("home")}>
+          <HashLink smooth to="/#experience">
             Experience
           </HashLink>
         </li>
         <li>
-          <HashLink smooth to="/portfolio#top" onClick={() => updatePage("portfolio")}>
+          <HashLink smooth to="/portfolio#top">
             Portfolio
           </HashLink>
         </li>
         <li>
-          <HashLink smooth to="/contact#top" onClick={() => updatePage("contact")}>
+          <HashLink smooth to="/contact#top">
             Contact
           </HashLink>
         </li>
