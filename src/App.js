@@ -23,6 +23,7 @@ const App = () => {
   });
 
   const removeButtonFocus = (e) => {
+    e.preventDefault();
     const target = e.target.closest("a, button");
 
     if (!target) {
