@@ -12,7 +12,7 @@ const Header = ({ updatePage, removeButtonFocus }) => {
         <h2 className="text-light">Web Developer</h2>
         <CTA updatePage={updatePage} />
         <HeaderSocials />
-        <div className="me-Img">
+        <div className="me-Img" data-aos="fade-up">
           <img src={me_image_temp} alt="Me standing in fron of a blue wall" />
         </div>
 

@@ -4,16 +4,16 @@ import { RiComputerLine } from "react-icons/ri";
 import { AiFillFolderOpen } from "react-icons/ai";
 import { HashLink } from "react-router-hash-link";
 
-const About = ({ updatePage }) => {
+const About = ({ updatePage, desktopMode }) => {
   return (
     <section id="about">
       <h3>Who Am i?</h3>
       <h2>Get to know me!</h2>
       <div className="container about__container">
-        <div className="about__me">
+        <div className="about__me"  data-aos={desktopMode ? "fade-right" : "fade-up"}>
           <img src={me_image_temp} alt="Me with a clear background" className="about-me-img" />
         </div>
-        <div className="about-content">
+        <div className="about-content" data-aos={desktopMode ? "fade-left" : "fade-up"}>
           <div className="about-cards">
             <article className="about-card">
               <RiComputerLine className="card-icon" />
